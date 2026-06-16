@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0d1117;
+    color:white;
+    font-family:Arial, sans-serif;
+}
+
+.header{
+    padding:20px;
+    background:#161b22;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:bold;
+    color:#ff4757;
+    margin-bottom:20px;
+}
+
+.search-container{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+.search-box{
+    flex:1;
+}
+
+.search-input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    background:#21262d;
+    color:white;
+    outline:none;
+}
+
+.filters{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+select{
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    background:#21262d;
+    color:white;
+}
+
+.clear-btn{
+    background:#ff4757;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.main-content{
+    padding:20px;
+}
+
+.section-title{
+    margin-bottom:20px;
+}
+
+.movies-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:20px;
+}
+
+.movie-card{
+    background:#161b22;
+    border-radius:12px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.movie-card:hover{
+    transform:translateY(-5px);
+}
+
+.movie-card img{
+    width:100%;
+    height:330px;
+    object-fit:cover;
+}
+
+.movie-info{
+    padding:15px;
+}
+
+.movie-title{
+    font-size:1rem;
+    margin-bottom:10px;
+}
+
+.movie-meta{
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+    color:#ccc;
+}
+
+.rating{
+    color:gold;
+}
+
+.loader{
+    display:none;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:768px){
+
+    .search-container{
+        flex-direction:column;
+    }
+
+    .search-box{
+        width:100%;
+    }
+
+    .filters{
+        width:100%;
+        flex-direction:column;
+    }
+
+    select{
+        width:100%;
+    }
+
+    .clear-btn{
+        width:100%;
+    }
+}

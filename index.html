@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix - Movie Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            🎬 MovieFlix
+        </div>
+
+        <div class="search-container">
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    class="search-input"
+                    placeholder="Search for movies...">
+            </div>
+
+            <div class="filters">
+
+                <select id="genreFilter">
+                    <option value="">All Genres</option>
+                </select>
+
+                <select id="yearFilter">
+                    <option value="">All Years</option>
+                </select>
+
+                <select id="sortFilter">
+                    <option value="popularity.desc">Most Popular</option>
+                    <option value="vote_average.desc">Highest Rated</option>
+                    <option value="release_date.desc">Latest Release</option>
+                    <option value="original_title.asc">A-Z</option>
+                </select>
+
+            </div>
+
+            <button id="clearBtn" class="clear-btn">
+                Clear All
+            </button>
+
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <section>
+            <h2 class="section-title">
+                🔥 Trending Movies
+            </h2>
+
+            <div id="moviesContainer" class="movies-grid"></div>
+        </section>
+
+    </main>
+
+    <div id="loader" class="loader">
+        Loading...
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
